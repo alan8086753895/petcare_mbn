@@ -42,7 +42,7 @@ class Animal(models.Model):
     year=models.IntegerField()
     month=models.IntegerField(null=True,blank=True)
     date=models.DateTimeField(default=timezone.now)
-    photo=models.ImageField(upload_to='images',null=True,blank=True)
+    photo=models.ImageField(upload_to='images/',null=True,blank=True)
     pet='pet'
     farm='farm'
     types=[
