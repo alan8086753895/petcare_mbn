@@ -26,6 +26,7 @@ def register(request):
             profile.user=user
             profile.save()
             reg=True
+            print("register working")
             messages.success(request, "Data inserted successfully")
             return render(request,'login.html')
             
@@ -35,7 +36,7 @@ def register(request):
         user_form=UserForm()
         profile_form=ProfileForm()
 
-        messages.success(request, "Data inserted successfully")
+        messages.success(request, "please")
 
     return render(request,'register.html',{'register':reg,'user_form':user_form,'profile_form':profile_form})
 
