@@ -68,11 +68,11 @@ def user_logout(request):
     logout(request)
     return redirect('index')
 
-
 def view_animal(request):
     animal=Animal.objects.all()
     return render(request,'view_animal.html',{'animal':animal})
-
+def pay(request):
+    return render(request,'pay.html')
 
 def add_animal(request):
     myselling=Animal.objects.filter(user=request.user)

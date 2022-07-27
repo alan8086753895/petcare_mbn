@@ -51,6 +51,7 @@ def payment(request,animal_id):
 
 
 
+
 def payment2(request,id):
     try:
         animal=FoodProducts.objects.get(id=id)

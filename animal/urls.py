@@ -36,8 +36,9 @@ urlpatterns=[
     path('view_food_products',views.view_food_products,name='view_food_products'),
 
     path('update_food_products/<int:id>',views.update_food_products,name='update_food_products'),
+    path('pay',views.pay,name='pay'),
     path('delete_food_products/<int:id>',views.delete_food_products,name='delete_food_products'),
-
+    
     path('add_loan',views.add_loan,name='add_loan'),
 
     path('view_my_loans',views.view_my_loans,name='view_my_loans'),

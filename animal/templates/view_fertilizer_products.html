@@ -33,7 +33,7 @@
               <td style="padding-left: 1em;">{{ i.quantity}}</td>
               <td style="padding-left: 1em;">{{ i.description}}</td>
               <td style="padding-left: 1em;">{{ i.amount}}</td>
-              <td style="padding-left: 1em;"><a href="{% url 'payment:payment2' i.id %}">Buy</a></td>
+              <td style="padding-left: 1em;"><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_JyLewSXGRTrWFb" async> </script> </form></td>
               {% if user.is_superuser %}
               <td style="padding-left: 1em;"><a href="{% url 'update_fertilizer_products' i.id %}">Update</a></td>
               <td style="padding-left: 1em;"><a href="{% url 'delete_fertilizer_products' i.id %}">Delete</a></td>
