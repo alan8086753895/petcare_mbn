@@ -138,9 +138,6 @@ class Symptoms(models.Model):
         (farm,'farm')
     ]
     animal_type=models.CharField(max_length=50,choices=types,null=True,blank=True,default=pet)
-    
-    def __str__(self):
-        return str(self.user.username)
 
 
 

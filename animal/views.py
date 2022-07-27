@@ -1,6 +1,8 @@
 from tkinter import Place
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
+
+from payment.models import Payment
 from . models import *
 from . forms import *
 from django.contrib.auth import authenticate,login,logout
@@ -412,4 +414,8 @@ def register_event(request,id):
     cp=EventRegister.objects.create(user=request.user.register,event=event)
 
     return redirect('dashboard')
-     
+
+
+def view_payment(request):
+    payments=Payment.objects.filter(is_paid=True).order_by('-id')
+    return render(request,'payment/view_payment.html',{'payments':payments})

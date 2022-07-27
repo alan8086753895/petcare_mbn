@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns=[
     path('',views.index,name="index"),
-   # path('register',views.register,name="register"),
+   #path('register',views.register,name="register"),
      path('register-now',views.register,name="register-now"),
     
     
@@ -63,7 +63,6 @@ urlpatterns=[
     path('search',views.search,name='search'),
     path('search-place',views.search_place,name='search-place'),
     path('search-map',views.search_map,name='search-place'),
-
 
     path('view_events',views.view_events,name='view_events'),
     path('register_event/<int:id>',views.register_event,name='register_event'),
